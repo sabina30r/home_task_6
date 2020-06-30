@@ -1,11 +1,11 @@
 package nix.edu;
 
 import nix.edu.data.Listener;
-import nix.edu.service.SingerService;
+import nix.edu.service.impl.SingerServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        SingerService singer = new SingerService();
+        SingerServiceImpl singer = new SingerServiceImpl();
         singer.startPerformance(new Listener());
     }
 }

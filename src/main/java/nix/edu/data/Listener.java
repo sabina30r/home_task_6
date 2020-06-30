@@ -1,4 +1,6 @@
 package nix.edu.data;
 
-public class Listener {
+import nix.edu.data.abstr.Observer;
+
+public class Listener implements Observer {
 }
