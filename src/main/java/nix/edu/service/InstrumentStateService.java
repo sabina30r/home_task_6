@@ -1,13 +1,15 @@
-package nix.edu;
+package nix.edu.service;
 
-public class InstrumentState {
+import nix.edu.exception.MicroException;
+
+public class InstrumentStateService {
     private boolean microState = true;
 
     public void isMicroOk(){
         if(microState){
             System.out.println("Микрофон исправен");
         } else{
-            throw new MicroException ("Микрофон неисправен");
+            throw new MicroException("Микрофон неисправен");
         }
     }
 }

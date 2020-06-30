@@ -1,4 +1,4 @@
-package nix.edu;
+package nix.edu.exception;
 
 public class MicroException extends RuntimeException {
 

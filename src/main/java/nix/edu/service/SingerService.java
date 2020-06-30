@@ -1,9 +1,12 @@
-package nix.edu;
+package nix.edu.service;
 
-public class Singer {
+import nix.edu.data.Listener;
 
-    private InstrumentState instrumentsStateChecker = new InstrumentState();
-    private SingerResponsibility singerResponsibility = new SingerResponsibility();
+public class SingerService {
+
+    private InstrumentStateService instrumentsStateChecker = new InstrumentStateService();
+    private SingerResponsibilityService singerResponsibility = new SingerResponsibilityService();
+
     public void startPerformance(Listener listener){
         instrumentsStateChecker.isMicroOk();
         singerResponsibility.startResponsibility(listener);

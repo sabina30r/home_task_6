@@ -1,4 +1,4 @@
-package nix.edu;
+package nix.edu.data;
 
 public class Listener {
 }

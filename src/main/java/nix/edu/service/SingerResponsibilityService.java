@@ -1,6 +1,8 @@
-package nix.edu;
+package nix.edu.service;
 
-public class SingerResponsibility {
+import nix.edu.data.Listener;
+
+public class SingerResponsibilityService {
     public void startResponsibility(Listener listener) {
         System.out.println("Дожидается зрителей");
         System.out.println("Приветствует зрителей");
