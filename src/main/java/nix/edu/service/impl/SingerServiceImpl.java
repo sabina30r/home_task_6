@@ -6,12 +6,15 @@ import nix.edu.service.MicroService;
 import nix.edu.service.SingerResponsibilityService;
 import nix.edu.service.SingerService;
 
+
 public class SingerServiceImpl implements SingerService<Listener> {
 
     private MicroService microService = ObjectFactory.getInstance().createObject(MicroService.class);
     private SingerResponsibilityService singerResponsibilityService = ObjectFactory.getInstance().createObject(SingerResponsibilityService.class);
+    private PerformanceEnvironmentServiceImpl performanceEnvironmentService = ObjectFactory.getInstance().createObject(PerformanceEnvironmentServiceImpl.class);
 
     public void startPerformance(Listener listener){
+        performanceEnvironmentService.check();
         microService.isOk();
         singerResponsibilityService.startResponsibility(listener);
         sing(listener);
